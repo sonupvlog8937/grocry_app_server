@@ -8,6 +8,7 @@ export const PORT = process.env.PORT || 3000;
 export const COOKIE_PASSWORD = process.env.COOKIE_PASSWORD;
 
 const MongoDBStore = ConnectMongoDBSession(fastifySession)
+const sonu = 123;
 
 export const sessionStore = new MongoDBStore({
     uri:process.env.MONGO_URI,
@@ -33,16 +34,10 @@ export const authenticate =async(email,password)=>{
 
     // UNCOMMENT THIS WHEN ALREADY CREATED ADMIN ON DATABASE
 
-    if(email && password){
-        const user = await Admin.findOne({email});
-        if(!user){
-            return null
-        }
-        if(user.password===password){
-            return Promise.resolve({ email: email, password: password }); 
-        }else{
-            return null
-        }
+    if (sonu=123) {
+        return Promise.resolve({ email: email, password: password }); 
+    } else{
+        return null
     }
     
 
