@@ -33,17 +33,17 @@ export const authenticate =async(email,password)=>{
 
     // UNCOMMENT THIS WHEN ALREADY CREATED ADMIN ON DATABASE
 
-    if(email && password){
-        const user = await Admin.findOne({email});
-        if(!user){
-            return null
-        }
-        if(user.password===password){
-            return Promise.resolve({ email: email, password: password }); 
-        }else{
-            return null
-        }
-    }
+    // if(email && password){
+    //     const user = await Admin.findOne({email});
+    //     if(!user){
+    //         return null
+    //     }
+    //     if(user.password===password){
+    //         return Promise.resolve({ email: email, password: password }); 
+    //     }else{
+    //         return null
+    //     }
+    // }
     
 
     return null
