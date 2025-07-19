@@ -22,13 +22,13 @@ export const authenticate =async(email,password)=>{
 
      // UNCOMMENT THIS WHEN CREATING ADMIN  FIRST TIME
 
-    // if(email && password){
-    //     if(email=='ritik@gmail.com' && password==="12345678"){
-    //         return Promise.resolve({ email: email, password: password }); 
-    //     }else{
-    //         return null
-    //     }
-    // }
+    if(email && password){
+        if(email=='ritik@gmail.com' && password==="12345678"){
+            return Promise.resolve({ email: email, password: password }); 
+        }else{
+            return null
+        }
+    }
 
 
     // UNCOMMENT THIS WHEN ALREADY CREATED ADMIN ON DATABASE
